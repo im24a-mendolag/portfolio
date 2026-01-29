@@ -19,7 +19,7 @@ export default function Home() {
       <main className="max-w-7xl mx-auto px-8 py-12">
         {/* Hero Section */}
         <section className="mb-16">
-          <h2 className="text-5xl font-bold mb-4">Hi, I'm [Your Name]</h2>
+          <h2 className="text-5xl font-bold mb-4">Hi, I'm Giovanni Mendola</h2>
           <p className="text-lg mb-8 text-gray-300">
             Full-stack developer specializing in modern web technologies and user-centered design.
           </p>
