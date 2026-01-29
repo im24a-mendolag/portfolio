@@ -2,7 +2,7 @@ import { contactInfo } from '@/data/contact';
 
 export default function Footer() {
   return (
-    <footer className="w-full mt-16">
+    <footer className="w-full bg-black">
       <div className="w-full h-px bg-white mb-8"></div>
       <div className="flex items-center justify-between px-8 pb-8 max-w-7xl mx-auto">
         <p className="text-white text-sm">© 2026 Portfolio. All rights reserved.</p>
