@@ -9,7 +9,7 @@ export default function Header() {
   const isActive = (path) => pathname === path;
 
   return (
-    <header className="w-full">
+    <header className="w-full fixed top-0 left-0 right-0 bg-black z-50">
       <div className="flex items-center justify-between px-8 py-6 max-w-7xl mx-auto">
         <h1 className="text-2xl font-bold text-white">Portfolio</h1>
         <nav className="flex gap-8">
