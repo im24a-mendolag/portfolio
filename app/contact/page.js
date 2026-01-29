@@ -54,7 +54,7 @@ export default function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full bg-black border border-white px-4 py-3 rounded-lg text-white focus:outline-none focus:border-gray-400 transition-colors"
+                  className="w-full bg-[#111111] border border-white px-4 py-3 rounded-lg text-white focus:outline-none focus:border-gray-400 transition-colors"
                   placeholder="Your name"
                 />
               </div>
@@ -69,7 +69,7 @@ export default function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full bg-black border border-white px-4 py-3 rounded-lg text-white focus:outline-none focus:border-gray-400 transition-colors"
+                  className="w-full bg-[#111111] border border-white px-4 py-3 rounded-lg text-white focus:outline-none focus:border-gray-400 transition-colors"
                   placeholder={contactInfo.email}
                 />
               </div>
@@ -101,7 +101,7 @@ export default function Contact() {
           <section>
             <h2 className="text-3xl font-bold mb-6">Contact Information</h2>
             <div className="space-y-6">
-              <div className="bg-black border border-white p-6 rounded-lg">
+              <div className="bg-[#111111] border border-white p-6 rounded-lg">
                 <div className="flex items-center gap-4">
                   <div className="bg-white text-black p-3 rounded-lg">
                     <svg
@@ -130,7 +130,7 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="bg-black border border-white p-6 rounded-lg">
+              <div className="bg-[#111111] border border-white p-6 rounded-lg">
                 <div className="flex items-center gap-4">
                   <div className="bg-white text-black p-3 rounded-lg">
                     <svg
@@ -155,7 +155,7 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="bg-black border border-white p-6 rounded-lg">
+              <div className="bg-[#111111] border border-white p-6 rounded-lg">
                 <div className="flex items-center gap-4">
                   <div className="bg-white text-black p-3 rounded-lg">
                     <svg
@@ -180,7 +180,7 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="bg-black border border-white p-6 rounded-lg">
+              <div className="bg-[#111111] border border-white p-6 rounded-lg">
                 <div className="flex items-center gap-4">
                   <div className="bg-white text-black p-3 rounded-lg">
                     <svg

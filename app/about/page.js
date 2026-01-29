@@ -43,7 +43,7 @@ export default function About() {
             {skills.map((skill) => (
               <div
                 key={skill}
-                className="bg-black border border-white px-4 py-3 text-center text-white hover:scale-105 transition-transform duration-300 rounded-lg cursor-pointer"
+                className="bg-[#111111] border border-white px-4 py-3 text-center text-white hover:scale-105 transition-transform duration-300 rounded-lg cursor-pointer"
               >
                 {skill}
               </div>
