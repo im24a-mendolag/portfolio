@@ -9,21 +9,57 @@ export default function Contact() {
     email: '',
     message: '',
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState({ type: null, message: '' });
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
+    // Clear status when user starts typing
+    if (submitStatus.type) {
+      setSubmitStatus({ type: null, message: '' });
+    }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    // You can add API call or email service integration here
-    alert('Thank you for your message! I\'ll get back to you soon.');
-    setFormData({ name: '', email: '', message: '' });
+    setIsSubmitting(true);
+    setSubmitStatus({ type: null, message: '' });
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus({
+          type: 'success',
+          message: data.message || 'Thank you for your message! I\'ll get back to you soon.',
+        });
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        setSubmitStatus({
+          type: 'error',
+          message: data.error || 'Failed to send message. Please try again.',
+        });
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setSubmitStatus({
+        type: 'error',
+        message: 'An error occurred. Please try again later.',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -42,6 +78,17 @@ export default function Contact() {
           {/* Contact Form */}
           <section>
             <h2 className="text-3xl font-bold mb-6">Send a Message</h2>
+            {submitStatus.type && (
+              <div
+                className={`mb-6 p-4 rounded-lg ${
+                  submitStatus.type === 'success'
+                    ? 'bg-green-900/30 border border-green-500 text-green-300'
+                    : 'bg-red-900/30 border border-red-500 text-red-300'
+                }`}
+              >
+                <p>{submitStatus.message}</p>
+              </div>
+            )}
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium mb-2">
@@ -54,7 +101,8 @@ export default function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full bg-gray-900 border border-white px-4 py-3 rounded-lg text-white focus:outline-none focus:border-gray-400 transition-colors"
+                  disabled={isSubmitting}
+                  className="w-full bg-gray-900 border border-white px-4 py-3 rounded-lg text-white focus:outline-none focus:border-gray-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   placeholder="Your name"
                 />
               </div>
@@ -69,7 +117,8 @@ export default function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full bg-gray-900 border border-white px-4 py-3 rounded-lg text-white focus:outline-none focus:border-gray-400 transition-colors"
+                  disabled={isSubmitting}
+                  className="w-full bg-gray-900 border border-white px-4 py-3 rounded-lg text-white focus:outline-none focus:border-gray-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   placeholder={contactInfo.email}
                 />
               </div>
@@ -83,16 +132,44 @@ export default function Contact() {
                   value={formData.message}
                   onChange={handleChange}
                   required
+                  disabled={isSubmitting}
                   rows={6}
-                  className="w-full bg-gray-900 border border-white px-4 py-3 rounded-lg text-white focus:outline-none focus:border-gray-400 transition-colors resize-none"
+                  className="w-full bg-gray-900 border border-white px-4 py-3 rounded-lg text-white focus:outline-none focus:border-gray-400 transition-colors resize-none disabled:opacity-50 disabled:cursor-not-allowed"
                   placeholder="Your message..."
                 />
               </div>
               <button
                 type="submit"
-                className="bg-white text-black px-6 py-3 font-medium hover:opacity-90 transition-opacity rounded-lg w-full"
+                disabled={isSubmitting}
+                className="bg-white text-black px-6 py-3 font-medium hover:opacity-90 transition-opacity rounded-lg w-full disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
               >
-                Send Message
+                {isSubmitting ? (
+                  <>
+                    <svg
+                      className="animate-spin h-5 w-5"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <circle
+                        className="opacity-25"
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        strokeWidth="4"
+                      ></circle>
+                      <path
+                        className="opacity-75"
+                        fill="currentColor"
+                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                      ></path>
+                    </svg>
+                    Sending...
+                  </>
+                ) : (
+                  'Send Message'
+                )}
               </button>
             </form>
           </section>
