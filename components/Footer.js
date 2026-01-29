@@ -48,10 +48,9 @@ export default function Footer() {
             aria-label="LeetCode"
           >
             <img
-              src="/leetcode_logo.png"
+              src="/leetocde_logo_inverted.png"
               alt="LeetCode"
               className="w-5 h-5"
-              style={{ filter: 'invert(1) brightness(1)' }}
             />
           </a>
           {/* Email Icon */}
