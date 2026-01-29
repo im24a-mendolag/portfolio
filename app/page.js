@@ -1,8 +1,19 @@
 import ProjectCard from '@/components/ProjectCard';
 import Link from 'next/link';
 import { skills } from '@/data/skills';
+import { projectData } from '@/data/projects';
 
 export default function Home() {
+  // Filter featured projects
+  const featuredProjects = Object.entries(projectData)
+    .filter(([slug, project]) => project.featured)
+    .map(([slug, project]) => ({
+      tag: project.tag,
+      title: project.title,
+      description: project.description,
+      href: `/projects/${slug}`,
+    }));
+
   return (
     <div className="min-h-screen bg-black text-white">
       <main className="max-w-7xl mx-auto px-8 py-12">
@@ -31,26 +42,21 @@ export default function Home() {
         {/* Featured Projects Section */}
         <section className="mb-16">
           <h2 className="text-4xl font-bold mb-8">Featured Projects</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <ProjectCard
-              tag="React"
-              title="Project Alpha"
-              description="A modern web application"
-              href="/projects/project-alpha"
-            />
-            <ProjectCard
-              tag="Next.js"
-              title="Project Beta"
-              description="Mobile-first experience"
-              href="/projects/project-beta"
-            />
-            <ProjectCard
-              tag="TypeScript"
-              title="Project Gamma"
-              description="Data visualization tool"
-              href="/projects/project-gamma"
-            />
-          </div>
+          {featuredProjects.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {featuredProjects.map((project) => (
+                <ProjectCard
+                  key={project.href}
+                  tag={project.tag}
+                  title={project.title}
+                  description={project.description}
+                  href={project.href}
+                />
+              ))}
+            </div>
+          ) : (
+            <p className="text-gray-400">No featured projects available.</p>
+          )}
         </section>
 
         {/* Skills & Technologies Section */}

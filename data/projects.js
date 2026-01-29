@@ -1,17 +1,20 @@
 export const projectData = {
-  'project-alpha': {
-    tag: 'React',
-    title: 'Project Alpha',
-    description: 'A modern web application',
-    longDescription: 'Project Alpha is a cutting-edge web application built with React, showcasing modern development practices and user-centered design. This project demonstrates advanced state management, responsive design, and seamless user experience.',
-    technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Node.js'],
+  'Portfolio': {
+    tag: 'Next.js',
+    title: 'Portfolio',
+    description: 'Personal portfolio website',
+    longDescription: 'A modern, responsive portfolio website built with Next.js and Tailwind CSS. Features a clean dark theme design with sections for showcasing projects, experience, education, and contact information. The site includes dynamic routing for individual project pages and a fully responsive layout that works seamlessly across all devices.',
+    technologies: ['Next.js', 'React', 'Tailwind CSS'],
     features: [
       'Responsive design for all devices',
-      'Real-time data synchronization',
-      'Advanced state management',
-      'Optimized performance',
+      'Dark theme UI with modern styling',
+      'Dynamic project pages with routing',
+      'Contact form integration',
+      'About section with experience and education',
+      'Project showcase with detailed descriptions',
     ],
-    githubUrl: 'https://github.com/username/project-alpha',
+    githubUrl: 'https://github.com/im24a-mendolag/portfolio',
+    featured: true,
   },
   'project-beta': {
     tag: 'Next.js',
@@ -26,6 +29,7 @@ export const projectData = {
       'Fast page loads',
     ],
     githubUrl: 'https://github.com/username/project-beta',
+    featured: true,
   },
   'project-gamma': {
     tag: 'TypeScript',
@@ -40,6 +44,7 @@ export const projectData = {
       'Export functionality',
     ],
     githubUrl: 'https://github.com/username/project-gamma',
+    featured: true,
   },
   'project-delta': {
     tag: 'React',
@@ -54,6 +59,7 @@ export const projectData = {
       'Order management',
     ],
     githubUrl: 'https://github.com/username/project-delta',
+    featured: false,
   },
   'project-epsilon': {
     tag: 'Next.js',
@@ -68,6 +74,7 @@ export const projectData = {
       'Performance metrics',
     ],
     githubUrl: 'https://github.com/username/project-epsilon',
+    featured: false,
   },
   'project-zeta': {
     tag: 'TypeScript',
@@ -82,5 +89,6 @@ export const projectData = {
       'Version control',
     ],
     githubUrl: 'https://github.com/username/project-zeta',
+    featured: false,
   },
 };
