@@ -4,7 +4,7 @@ export const skills = [
   'Node.js',
   'Next.js',
   'Tailwind CSS',
-  'GraphQL',
+  'MongoDB',
   'PostgreSQL',
   'Docker',
 ];

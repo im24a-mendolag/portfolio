@@ -51,7 +51,7 @@ export default function ProjectPage() {
           </div>
           <h1 className="text-5xl font-bold mb-4">{project.title}</h1>
           <p className="text-xl text-gray-300 mb-6">{project.description}</p>
-          <p className="text-lg text-gray-400 max-w-3xl">{project.longDescription}</p>
+          <p className="text-lg text-gray-400 max-w-3xl text-justify">{project.longDescription}</p>
         </section>
 
         {/* Technologies Used */}
