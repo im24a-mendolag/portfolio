@@ -44,13 +44,17 @@ export default function Footer() {
             href={contactInfo.leetcode}
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:opacity-80 transition-opacity"
+            className="hover:opacity-80 transition-opacity inline-flex items-center justify-center flex-shrink-0"
             aria-label="LeetCode"
           >
             <img
-              src="/leetocde_logo_inverted.png"
+              src="/leetcode_logo_inverted.png"
               alt="LeetCode"
-              className="w-5 h-5"
+              className="w-5 h-5 flex-shrink-0"
+              width={20}
+              height={20}
+              style={{ minWidth: '20px', minHeight: '20px' }}
+              loading="eager"
             />
           </a>
           {/* Email Icon */}
