@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { contactInfo } from '@/data/contact';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -69,7 +70,7 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   className="w-full bg-black border border-white px-4 py-3 rounded-lg text-white focus:outline-none focus:border-gray-400 transition-colors"
-                  placeholder="your.email@example.com"
+                  placeholder={contactInfo.email}
                 />
               </div>
               <div>
@@ -120,10 +121,10 @@ export default function Contact() {
                   <div>
                     <h3 className="text-lg font-semibold mb-1">Email</h3>
                     <a
-                      href="mailto:your.email@example.com"
+                      href={`mailto:${contactInfo.email}`}
                       className="text-gray-300 hover:text-white transition-colors"
                     >
-                      your.email@example.com
+                      {contactInfo.email}
                     </a>
                   </div>
                 </div>
@@ -143,12 +144,12 @@ export default function Contact() {
                   <div>
                     <h3 className="text-lg font-semibold mb-1">GitHub</h3>
                     <a
-                      href="https://github.com/username"
+                      href={contactInfo.github}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-gray-300 hover:text-white transition-colors"
                     >
-                      github.com/username
+                      {contactInfo.github.replace('https://', '')}
                     </a>
                   </div>
                 </div>
@@ -168,12 +169,12 @@ export default function Contact() {
                   <div>
                     <h3 className="text-lg font-semibold mb-1">LinkedIn</h3>
                     <a
-                      href="https://linkedin.com/in/username"
+                      href={contactInfo.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-gray-300 hover:text-white transition-colors"
                     >
-                      linkedin.com/in/username
+                      {contactInfo.linkedin.replace('https://', '')}
                     </a>
                   </div>
                 </div>
@@ -193,12 +194,12 @@ export default function Contact() {
                   <div>
                     <h3 className="text-lg font-semibold mb-1">Twitter</h3>
                     <a
-                      href="https://twitter.com/username"
+                      href={contactInfo.twitter}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-gray-300 hover:text-white transition-colors"
                     >
-                      @username
+                      @{contactInfo.twitter.split('/').pop()}
                     </a>
                   </div>
                 </div>

@@ -1,3 +1,5 @@
+import { contactInfo } from '@/data/contact';
+
 export default function Footer() {
   return (
     <footer className="w-full mt-16">
@@ -7,7 +9,9 @@ export default function Footer() {
         <div className="flex gap-6">
           {/* GitHub Icon */}
           <a
-            href="#"
+            href={contactInfo.github}
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-white hover:opacity-80 transition-opacity"
             aria-label="GitHub"
           >
@@ -21,7 +25,9 @@ export default function Footer() {
           </a>
           {/* Twitter Icon */}
           <a
-            href="#"
+            href={contactInfo.twitter}
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-white hover:opacity-80 transition-opacity"
             aria-label="Twitter"
           >
@@ -35,7 +41,9 @@ export default function Footer() {
           </a>
           {/* LinkedIn Icon */}
           <a
-            href="#"
+            href={contactInfo.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-white hover:opacity-80 transition-opacity"
             aria-label="LinkedIn"
           >
@@ -49,7 +57,7 @@ export default function Footer() {
           </a>
           {/* Email Icon */}
           <a
-            href="#"
+            href={`mailto:${contactInfo.email}`}
             className="text-white hover:opacity-80 transition-opacity"
             aria-label="Email"
           >

@@ -1,5 +1,6 @@
 import ProjectCard from '@/components/ProjectCard';
 import Link from 'next/link';
+import { skills } from '@/data/skills';
 
 export default function Home() {
   return (
@@ -56,16 +57,7 @@ export default function Home() {
         <section className="mb-16">
           <h2 className="text-4xl font-bold mb-8">Skills & Technologies</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[
-              'React',
-              'TypeScript',
-              'Node.js',
-              'Next.js',
-              'Tailwind CSS',
-              'GraphQL',
-              'PostgreSQL',
-              'Docker',
-            ].map((skill) => (
+            {skills.map((skill) => (
               <div
                 key={skill}
                 className="bg-black border border-white px-4 py-3 text-center text-white hover:scale-105 transition-transform duration-300 rounded-lg cursor-pointer"
