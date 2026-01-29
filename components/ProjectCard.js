@@ -3,7 +3,7 @@ import Link from 'next/link';
 export default function ProjectCard({ tag, title, description, href = '#' }) {
   return (
     <Link href={href} className="block">
-      <div className="bg-[#111111] border border-white p-6 relative hover:scale-105 transition-transform duration-300 cursor-pointer rounded-lg">
+      <div className="bg-gray-900 border border-white p-6 relative hover:scale-105 transition-transform duration-300 cursor-pointer rounded-lg">
         <div className="flex items-start justify-between mb-4">
           <span className="bg-white text-black text-xs font-medium px-2 py-1 rounded">
             {tag}

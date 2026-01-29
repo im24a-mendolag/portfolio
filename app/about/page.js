@@ -10,15 +10,11 @@ export default function About() {
         {/* Header Section */}
         <section className="mb-16">
           <h1 className="text-5xl font-bold mb-4">About Me</h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl">
-            Full-stack developer specializing in modern web technologies and user-centered design.
-          </p>
         </section>
 
         {/* Bio Section */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-6">Who I Am</h2>
-          <div className="space-y-4 text-lg text-gray-300 max-w-3xl">
+          <div className="space-y-4 text-lg text-gray-300 max-w-3xl text-justify">
             <p>
               I'm a passionate full-stack developer with a love for creating beautiful, 
               functional web applications. I enjoy working with modern technologies and 
@@ -43,7 +39,7 @@ export default function About() {
             {skills.map((skill) => (
               <div
                 key={skill}
-                className="bg-[#111111] border border-white px-4 py-3 text-center text-white hover:scale-105 transition-transform duration-300 rounded-lg cursor-pointer"
+                className="bg-gray-900 border border-white px-4 py-3 text-center text-white hover:scale-105 transition-transform duration-300 rounded-lg cursor-pointer"
               >
                 {skill}
               </div>
@@ -92,7 +88,7 @@ export default function About() {
             </Link>
             <Link
               href="/contact"
-              className="bg-black border border-white text-white px-6 py-3 font-medium hover:opacity-90 transition-opacity rounded-lg"
+              className="bg-gray-900 border border-white text-white px-6 py-3 font-medium hover:opacity-90 transition-opacity rounded-lg"
             >
               Get In Touch
             </Link>

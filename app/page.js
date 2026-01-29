@@ -21,7 +21,7 @@ export default function Home() {
             </Link>
             <Link
               href="/contact"
-              className="bg-black border border-white text-white px-6 py-3 font-medium hover:opacity-90 transition-opacity rounded-lg"
+              className="bg-gray-900 border border-white text-white px-6 py-3 font-medium hover:opacity-90 transition-opacity rounded-lg"
             >
               Contact Me
             </Link>
@@ -60,7 +60,7 @@ export default function Home() {
             {skills.map((skill) => (
               <div
                 key={skill}
-                className="bg-[#111111] border border-white px-4 py-3 text-center text-white hover:scale-105 transition-transform duration-300 rounded-lg cursor-pointer"
+                className="bg-gray-900 border border-white px-4 py-3 text-center text-white hover:scale-105 transition-transform duration-300 rounded-lg cursor-pointer"
               >
                 {skill}
               </div>

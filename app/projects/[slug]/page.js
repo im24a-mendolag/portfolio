@@ -62,7 +62,7 @@ export default function ProjectPage() {
               {project.technologies.map((tech) => (
                 <div
                   key={tech}
-                  className="bg-black border border-white px-4 py-3 text-center text-white hover:scale-105 transition-transform duration-300 rounded-lg cursor-pointer"
+                  className="bg-gray-900 border border-white px-4 py-3 text-center text-white hover:scale-105 transition-transform duration-300 rounded-lg cursor-pointer"
                 >
                   {tech}
                 </div>
@@ -79,7 +79,7 @@ export default function ProjectPage() {
               {project.features.map((feature, index) => (
                 <div
                   key={index}
-                  className="bg-black border border-white p-4 rounded-lg"
+                  className="bg-gray-900 border border-white p-4 rounded-lg"
                 >
                   <div className="flex items-center gap-3">
                     <svg
@@ -110,7 +110,7 @@ export default function ProjectPage() {
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-black border border-white text-white px-6 py-3 font-medium hover:opacity-90 transition-opacity rounded-lg inline-flex items-center gap-2"
+              className="bg-gray-900 border border-white text-white px-6 py-3 font-medium hover:opacity-90 transition-opacity rounded-lg inline-flex items-center gap-2"
             >
               <svg
                 className="w-5 h-5"
@@ -130,7 +130,7 @@ export default function ProjectPage() {
           </Link>
           <Link
             href="/contact"
-            className="bg-black border border-white text-white px-6 py-3 font-medium hover:opacity-90 transition-opacity rounded-lg"
+            className="bg-gray-900 border border-white text-white px-6 py-3 font-medium hover:opacity-90 transition-opacity rounded-lg"
           >
             Get In Touch
           </Link>
