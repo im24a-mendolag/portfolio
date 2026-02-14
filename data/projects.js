@@ -3,6 +3,7 @@ export const projectData = {
     tag: 'Next.js',
     title: 'Portfolio',
     description: 'Personal portfolio website',
+    image: '/portfolio.png',
     longDescription: 'A modern, responsive portfolio website built with Next.js and Tailwind CSS. Features a clean dark theme design with sections for showcasing projects, experience, education, and contact information. The site includes dynamic routing for individual project pages and a fully responsive layout that works seamlessly across all devices.',
     technologies: ['Next.js', 'React', 'Tailwind CSS'],
     features: [
@@ -20,6 +21,7 @@ export const projectData = {
     tag: 'Next.js',
     title: 'Project Beta',
     description: 'Mobile-first experience',
+    image: 'https://placehold.co/600x300',
     longDescription: 'Project Beta is a mobile-first web application built with Next.js, focusing on providing an exceptional experience across all devices. The project emphasizes performance, accessibility, and modern web standards.',
     technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'GraphQL'],
     features: [
@@ -35,6 +37,7 @@ export const projectData = {
     tag: 'TypeScript',
     title: 'Project Gamma',
     description: 'Data visualization tool',
+    image: 'https://placehold.co/600x300',
     longDescription: 'Project Gamma is a powerful data visualization tool that helps users understand complex datasets through interactive charts and graphs. Built with TypeScript for type safety and reliability.',
     technologies: ['TypeScript', 'React', 'D3.js', 'PostgreSQL'],
     features: [
@@ -50,6 +53,7 @@ export const projectData = {
     tag: 'React',
     title: 'Project Delta',
     description: 'E-commerce platform',
+    image: 'https://placehold.co/600x300',
     longDescription: 'A full-featured e-commerce platform built with React, providing a seamless shopping experience with secure payment processing and inventory management.',
     technologies: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
     features: [
@@ -65,6 +69,7 @@ export const projectData = {
     tag: 'Next.js',
     title: 'Project Epsilon',
     description: 'Social media dashboard',
+    image: 'https://placehold.co/600x300',
     longDescription: 'A comprehensive social media dashboard that aggregates content from multiple platforms, providing insights and analytics for social media management.',
     technologies: ['Next.js', 'TypeScript', 'GraphQL', 'Docker'],
     features: [
@@ -80,6 +85,7 @@ export const projectData = {
     tag: 'TypeScript',
     title: 'Project Zeta',
     description: 'Real-time collaboration tool',
+    image: 'https://placehold.co/600x300',
     longDescription: 'A real-time collaboration tool that enables teams to work together seamlessly, with live editing, chat functionality, and version control.',
     technologies: ['TypeScript', 'React', 'WebSockets', 'Node.js'],
     features: [

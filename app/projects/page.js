@@ -6,6 +6,7 @@ export default function Projects() {
     tag: project.tag,
     title: project.title,
     description: project.description,
+    image: project.image,
     href: `/projects/${slug}`,
   }));
 
@@ -27,6 +28,7 @@ export default function Projects() {
                 tag={project.tag}
                 title={project.title}
                 description={project.description}
+                image={project.image}
                 href={project.href}
               />
             ))}

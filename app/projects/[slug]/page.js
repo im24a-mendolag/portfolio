@@ -12,6 +12,7 @@ export default function ProjectPage() {
     tag: 'Unknown',
     title: 'Project Not Found',
     description: 'This project does not exist',
+    image: null,
     longDescription: 'The project you are looking for could not be found.',
     technologies: [],
     features: [],
@@ -42,16 +43,33 @@ export default function ProjectPage() {
           Back to Projects
         </Link>
 
-        {/* Project Header */}
+        {/* Project Header with Side Image */}
         <section className="mb-12">
-          <div className="flex items-center gap-4 mb-4">
-            <span className="bg-white text-black text-sm font-medium px-3 py-1 rounded">
-              {project.tag}
-            </span>
+          <div className="flex flex-col lg:flex-row gap-10 items-start">
+            {/* Text Content */}
+            <div className="flex-1 min-w-0">
+              <div className="flex items-center gap-4 mb-4">
+                <span className="bg-white text-black text-sm font-medium px-3 py-1 rounded">
+                  {project.tag}
+                </span>
+              </div>
+              <h1 className="text-5xl font-bold mb-4">{project.title}</h1>
+              <p className="text-xl text-gray-300 mb-6">{project.description}</p>
+              <p className="text-lg text-gray-400 text-justify">{project.longDescription}</p>
+            </div>
+            {/* Project Image */}
+            {project.image && (
+              <div className="w-full lg:w-[45%] flex-shrink-0">
+                <div className="rounded-lg overflow-hidden border border-white">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
+              </div>
+            )}
           </div>
-          <h1 className="text-5xl font-bold mb-4">{project.title}</h1>
-          <p className="text-xl text-gray-300 mb-6">{project.description}</p>
-          <p className="text-lg text-gray-400 max-w-3xl text-justify">{project.longDescription}</p>
         </section>
 
         {/* Technologies Used */}
