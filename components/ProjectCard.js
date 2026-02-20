@@ -5,7 +5,7 @@ export default function ProjectCard({ tag, title, description, image, href = '#'
     <Link href={href} className="block">
       <div className="bg-gray-900 border border-white relative hover:scale-105 transition-transform duration-300 cursor-pointer rounded-lg overflow-hidden">
         {image && (
-          <div className="w-full aspect-video overflow-hidden">
+          <div className="w-full aspect-[2/1] overflow-hidden">
             <img
               src={image}
               alt={title}
