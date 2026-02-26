@@ -40,7 +40,7 @@ export const projectData = {
     tag: 'TypeScript',
     title: 'Project Gamma',
     description: 'Data visualization tool',
-    image: 'https://placehold.co/600x300',
+    image: '',
     longDescription: 'Project Gamma is a powerful data visualization tool that helps users understand complex datasets through interactive charts and graphs. Built with TypeScript for type safety and reliability.',
     technologies: ['TypeScript', 'React', 'D3.js', 'PostgreSQL'],
     features: [
@@ -56,7 +56,7 @@ export const projectData = {
     tag: 'React',
     title: 'Project Delta',
     description: 'E-commerce platform',
-    image: 'https://placehold.co/600x300',
+    image: '',
     longDescription: 'A full-featured e-commerce platform built with React, providing a seamless shopping experience with secure payment processing and inventory management.',
     technologies: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
     features: [
@@ -72,7 +72,7 @@ export const projectData = {
     tag: 'Next.js',
     title: 'Project Epsilon',
     description: 'Social media dashboard',
-    image: 'https://placehold.co/600x300',
+    image: '',
     longDescription: 'A comprehensive social media dashboard that aggregates content from multiple platforms, providing insights and analytics for social media management.',
     technologies: ['Next.js', 'TypeScript', 'GraphQL', 'Docker'],
     features: [
@@ -88,7 +88,7 @@ export const projectData = {
     tag: 'TypeScript',
     title: 'Project Zeta',
     description: 'Real-time collaboration tool',
-    image: 'https://placehold.co/600x300',
+    image: '',
     longDescription: 'A real-time collaboration tool that enables teams to work together seamlessly, with live editing, chat functionality, and version control.',
     technologies: ['TypeScript', 'React', 'WebSockets', 'Node.js'],
     features: [

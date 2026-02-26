@@ -1,8 +1,8 @@
 import Link from 'next/link';
 
-export default function ProjectCard({ tag, title, description, image, href = '#' }) {
+export default function ProjectCard({ tag, title, description, image, href = '#', className = '' }) {
   return (
-    <Link href={href} className="block">
+    <Link href={href} className={`block ${className}`}>
       <div className="bg-gray-900 border border-white relative hover:scale-105 transition-transform duration-300 cursor-pointer rounded-lg overflow-hidden">
         {image && (
           <div className="w-full aspect-[2/1] overflow-hidden">
