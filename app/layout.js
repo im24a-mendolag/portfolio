@@ -16,6 +16,10 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Portfolio",
   description: "Full-stack developer specializing in modern web technologies and user-centered design",
+  icons: {
+    icon: [{ url: "/gm.png", type: "image/png" }],
+    apple: "/gm.png",
+  },
 };
 
 export default function RootLayout({ children }) {

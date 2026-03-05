@@ -5,7 +5,7 @@ export const projectData = {
     description: 'Personal portfolio website',
     image: '/portfolio.png',
     longDescription: 'A modern, responsive portfolio website built with Next.js and Tailwind CSS. Features a clean dark theme design with sections for showcasing projects, experience, education, and contact information. The site includes dynamic routing for individual project pages and a fully responsive layout that works seamlessly across all devices.',
-    technologies: ['Next.js', 'React', 'Tailwind CSS'],
+    technologies: ['nextjs', 'react', 'tailwind'],
     features: [
       'Responsive design for all devices',
       'Dark theme UI with modern styling',
@@ -23,7 +23,7 @@ export const projectData = {
     description: 'Grade tracking app for Swiss students',
     image: '/gradepoints.png',
     longDescription: 'GradePoints is a full-stack grade tracking web app built for Swiss vocational school students. It supports two schools — KSH (semester-based) and BZZ (module-based) — each with distinct grading structures, weighted averages, bonus/malus adjustments, and pass/fail rules. Features include interactive statistics with charts, email verification, and account management.',
-    technologies: ['Next.js 16', 'TypeScript', 'Tailwind CSS 4', 'Prisma 7', 'PostgreSQL', 'NextAuth.js v5', 'Recharts', 'Resend'],
+    technologies: ['nextjs', 'typescript', 'tailwind', 'prisma', 'postgresql', 'nextauth', 'recharts', 'resend'],
     features: [
       'Multi-school support with KSH semester-based and BZZ module-based grading',
       'Weighted grade averages with bonus/malus adjustments',
@@ -42,7 +42,7 @@ export const projectData = {
     description: 'Data visualization tool',
     image: '',
     longDescription: 'Project Gamma is a powerful data visualization tool that helps users understand complex datasets through interactive charts and graphs. Built with TypeScript for type safety and reliability.',
-    technologies: ['TypeScript', 'React', 'D3.js', 'PostgreSQL'],
+    technologies: ['typescript', 'react', 'd3', 'postgresql'],
     features: [
       'Interactive data visualization',
       'Real-time data updates',
@@ -58,7 +58,7 @@ export const projectData = {
     description: 'E-commerce platform',
     image: '',
     longDescription: 'A full-featured e-commerce platform built with React, providing a seamless shopping experience with secure payment processing and inventory management.',
-    technologies: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
+    technologies: ['react', 'nodejs', 'postgresql', 'stripe'],
     features: [
       'Product catalog',
       'Shopping cart',
@@ -74,7 +74,7 @@ export const projectData = {
     description: 'Social media dashboard',
     image: '',
     longDescription: 'A comprehensive social media dashboard that aggregates content from multiple platforms, providing insights and analytics for social media management.',
-    technologies: ['Next.js', 'TypeScript', 'GraphQL', 'Docker'],
+    technologies: ['nextjs', 'typescript', 'graphql', 'docker'],
     features: [
       'Multi-platform integration',
       'Analytics dashboard',
@@ -90,7 +90,7 @@ export const projectData = {
     description: 'Real-time collaboration tool',
     image: '',
     longDescription: 'A real-time collaboration tool that enables teams to work together seamlessly, with live editing, chat functionality, and version control.',
-    technologies: ['TypeScript', 'React', 'WebSockets', 'Node.js'],
+    technologies: ['typescript', 'react', 'websockets', 'nodejs'],
     features: [
       'Real-time collaboration',
       'Live editing',

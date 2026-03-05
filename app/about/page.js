@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import ExperienceCard from '@/components/ExperienceCard';
 import EducationCard from '@/components/EducationCard';
-import { skills } from '@/data/skills';
+import { skills } from '@/data/technologies';
+import TechnologyBadge from '@/components/TechnologyBadge';
 
 export default function About() {
   return (
@@ -37,12 +38,7 @@ export default function About() {
           <h2 className="text-3xl font-bold mb-6">Skills & Expertise</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {skills.map((skill) => (
-              <div
-                key={skill}
-                className="bg-gray-900 border border-white px-4 py-3 text-center text-white hover:scale-105 transition-transform duration-300 rounded-lg cursor-pointer"
-              >
-                {skill}
-              </div>
+              <TechnologyBadge key={skill} technologyName={skill} />
             ))}
           </div>
         </section>

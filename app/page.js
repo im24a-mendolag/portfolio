@@ -1,7 +1,8 @@
 import ProjectCard from '@/components/ProjectCard';
 import Link from 'next/link';
-import { skills } from '@/data/skills';
+import { skills } from '@/data/technologies';
 import { projectData } from '@/data/projects';
+import TechnologyBadge from '@/components/TechnologyBadge';
 
 export default function Home() {
   // Filter featured projects
@@ -19,7 +20,7 @@ export default function Home() {
     <div className="min-h-screen bg-black text-white">
       <main className="max-w-7xl mx-auto px-8 py-12">
         {/* Hero Section */}
-        <section className="mb-16">
+        <section className="min-h-[calc(100vh-8rem)] flex flex-col justify-center mb-16">
           <h2 className="text-5xl font-bold mb-4">Hi, I'm Giovanni Mendola</h2>
           <p className="text-lg mb-8 text-gray-300">
             Full-stack developer specializing in modern web technologies and user-centered design.
@@ -66,12 +67,7 @@ export default function Home() {
           <h2 className="text-4xl font-bold mb-8">Skills & Technologies</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {skills.map((skill) => (
-              <div
-                key={skill}
-                className="bg-gray-900 border border-white px-4 py-3 text-center text-white hover:scale-105 transition-transform duration-300 rounded-lg cursor-pointer"
-              >
-                {skill}
-              </div>
+              <TechnologyBadge key={skill} technologyName={skill} />
             ))}
           </div>
         </section>

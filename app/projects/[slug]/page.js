@@ -1,12 +1,12 @@
 'use client';
 
-import { useParams, useRouter } from 'next/navigation';
+import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import { projectData } from '@/data/projects';
+import TechnologyBadge from '@/components/TechnologyBadge';
 
 export default function ProjectPage() {
   const { slug } = useParams();
-  const router = useRouter();
 
   const project = projectData[slug] || {
     tag: 'Unknown',
@@ -78,12 +78,7 @@ export default function ProjectPage() {
             <h2 className="text-3xl font-bold mb-6">Technologies Used</h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {project.technologies.map((tech) => (
-                <div
-                  key={tech}
-                  className="bg-gray-900 border border-white px-4 py-3 text-center text-white hover:scale-105 transition-transform duration-300 rounded-lg cursor-pointer"
-                >
-                  {tech}
-                </div>
+                <TechnologyBadge key={tech} technologyName={tech} />
               ))}
             </div>
           </section>
@@ -93,31 +88,11 @@ export default function ProjectPage() {
         {project.features.length > 0 && (
           <section className="mb-12">
             <h2 className="text-3xl font-bold mb-6">Key Features</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <ul className="list-disc list-inside space-y-3 text-white text-lg">
               {project.features.map((feature, index) => (
-                <div
-                  key={index}
-                  className="bg-gray-900 border border-white p-4 rounded-lg"
-                >
-                  <div className="flex items-center gap-3">
-                    <svg
-                      className="w-5 h-5 text-white flex-shrink-0"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                    <p className="text-white">{feature}</p>
-                  </div>
-                </div>
+                <li key={index}>{feature}</li>
               ))}
-            </div>
+            </ul>
           </section>
         )}
 
@@ -148,7 +123,7 @@ export default function ProjectPage() {
           </Link>
           <Link
             href="/contact"
-            className="bg-gray-900 border border-white text-white px-6 py-3 font-medium hover:opacity-90 transition-opacity rounded-lg"
+            className="text-white underline underline-offset-4 hover:opacity-80 transition-opacity font-medium inline-flex items-center"
           >
             Get In Touch
           </Link>
