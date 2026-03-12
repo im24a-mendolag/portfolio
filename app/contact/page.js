@@ -76,7 +76,7 @@ export default function Contact() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <section>
+          <section className="h-full flex flex-col">
             <h2 className="text-3xl font-bold mb-6">Send a Message</h2>
             {submitStatus.type && (
               <div
@@ -89,59 +89,61 @@ export default function Contact() {
                 <p>{submitStatus.message}</p>
               </div>
             )}
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium mb-2">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  disabled={isSubmitting}
-                  className="w-full bg-gray-900 border border-white px-4 py-3 rounded-lg text-white focus:outline-none focus:border-gray-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                  placeholder="Your name"
-                />
-              </div>
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium mb-2">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  disabled={isSubmitting}
-                  className="w-full bg-gray-900 border border-white px-4 py-3 rounded-lg text-white focus:outline-none focus:border-gray-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                  placeholder={contactInfo.email}
-                />
-              </div>
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-2">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  disabled={isSubmitting}
-                  rows={6}
-                  className="w-full bg-gray-900 border border-white px-4 py-3 rounded-lg text-white focus:outline-none focus:border-gray-400 transition-colors resize-none disabled:opacity-50 disabled:cursor-not-allowed"
-                  placeholder="Your message..."
-                />
+            <form onSubmit={handleSubmit} className="flex flex-1 flex-col">
+              <div className="space-y-6">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium mb-2">
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    disabled={isSubmitting}
+                    className="w-full bg-gray-900 border border-white px-4 py-3 rounded-lg text-white focus:outline-none focus:border-gray-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                    placeholder="Your name"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium mb-2">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    disabled={isSubmitting}
+                    className="w-full bg-gray-900 border border-white px-4 py-3 rounded-lg text-white focus:outline-none focus:border-gray-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                    placeholder={contactInfo.email}
+                  />
+                </div>
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium mb-2">
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                    disabled={isSubmitting}
+                    rows={6}
+                    className="w-full bg-gray-900 border border-white px-4 py-3 rounded-lg text-white focus:outline-none focus:border-gray-400 transition-colors resize-none disabled:opacity-50 disabled:cursor-not-allowed"
+                    placeholder="Your message..."
+                  />
+                </div>
               </div>
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="bg-white text-black px-6 py-3 font-medium hover:opacity-90 transition-opacity rounded-lg w-full disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                className="mt-auto bg-white text-black px-6 py-3 font-medium hover:opacity-90 transition-opacity rounded-lg w-full disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
               >
                 {isSubmitting ? (
                   <>
