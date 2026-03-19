@@ -103,7 +103,7 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     disabled={isSubmitting}
-                    className="w-full bg-gray-900 border border-white px-4 py-3 rounded-lg text-white focus:outline-none focus:border-gray-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full bg-white/5 border border-white/20 px-4 py-3 rounded-md text-white focus:outline-none focus:border-white/50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                     placeholder="Your name"
                   />
                 </div>
@@ -119,7 +119,7 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     disabled={isSubmitting}
-                    className="w-full bg-gray-900 border border-white px-4 py-3 rounded-lg text-white focus:outline-none focus:border-gray-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full bg-white/5 border border-white/20 px-4 py-3 rounded-md text-white focus:outline-none focus:border-white/50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                     placeholder={contactInfo.email}
                   />
                 </div>
@@ -135,7 +135,7 @@ export default function Contact() {
                     required
                     disabled={isSubmitting}
                     rows={6}
-                    className="w-full bg-gray-900 border border-white px-4 py-3 rounded-lg text-white focus:outline-none focus:border-gray-400 transition-colors resize-none disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full bg-white/5 border border-white/20 px-4 py-3 rounded-md text-white focus:outline-none focus:border-white/50 transition-colors resize-none disabled:opacity-50 disabled:cursor-not-allowed"
                     placeholder="Your message..."
                   />
                 </div>
@@ -180,9 +180,9 @@ export default function Contact() {
           <section>
             <h2 className="text-3xl font-bold mb-6">Contact Information</h2>
             <div className="space-y-6">
-              <div className="bg-gray-900 border border-white p-6 rounded-lg">
+              <div className="bg-white/5 border border-white/10 p-6 rounded-md">
                 <div className="flex items-center gap-4">
-                  <div className="bg-white text-black p-3 rounded-lg">
+                  <div className="bg-white/10 text-white p-3 rounded-md">
                     <svg
                       className="w-6 h-6"
                       fill="none"
@@ -209,9 +209,9 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="bg-gray-900 border border-white p-6 rounded-lg">
+              <div className="bg-white/5 border border-white/10 p-6 rounded-md">
                 <div className="flex items-center gap-4">
-                  <div className="bg-white text-black p-3 rounded-lg">
+                  <div className="bg-white/10 text-white p-3 rounded-md">
                     <svg
                       className="w-6 h-6"
                       fill="currentColor"
@@ -234,9 +234,9 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="bg-gray-900 border border-white p-6 rounded-lg">
+              <div className="bg-white/5 border border-white/10 p-6 rounded-md">
                 <div className="flex items-center gap-4">
-                  <div className="bg-white text-black p-3 rounded-lg">
+                  <div className="bg-white/10 text-white p-3 rounded-md">
                     <svg
                       className="w-6 h-6"
                       fill="currentColor"
@@ -259,13 +259,13 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="bg-gray-900 border border-white p-6 rounded-lg">
+              <div className="bg-white/5 border border-white/10 p-6 rounded-md">
                 <div className="flex items-center gap-4">
-                  <div className="bg-white p-3 rounded-lg flex items-center justify-center">
+                  <div className="bg-white/10 p-3 rounded-md flex items-center justify-center">
                     <img
                       src="/leetcode_logo.png"
                       alt="LeetCode"
-                      className="w-6 h-6"
+                      className="w-6 h-6 brightness-0 invert"
                     />
                   </div>
                   <div className="min-w-0 flex-1">

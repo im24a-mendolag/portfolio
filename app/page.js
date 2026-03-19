@@ -1,11 +1,10 @@
-import ProjectCard from '@/components/ProjectCard';
 import Link from 'next/link';
-import { skills } from '@/data/technologies';
+import { primarySkills, otherSkills } from '@/data/technologies';
 import { projectData } from '@/data/projects';
 import TechnologyBadge from '@/components/TechnologyBadge';
+import ProjectSlider from '@/components/ProjectSlider';
 
 export default function Home() {
-  // Filter featured projects
   const featuredProjects = Object.entries(projectData)
     .filter(([slug, project]) => project.featured)
     .map(([slug, project]) => ({
@@ -20,9 +19,9 @@ export default function Home() {
     <div className="min-h-screen bg-black text-white">
       <main className="max-w-7xl mx-auto px-8 py-12">
         {/* Hero Section */}
-        <section className="min-h-[calc(100vh-8rem)] flex flex-col justify-center mb-16">
+        <section className="py-16 md:py-24 mb-16">
           <h2 className="text-5xl font-bold mb-4">Hi, I'm Giovanni Mendola</h2>
-          <p className="text-lg mb-8 text-gray-300">
+          <p className="text-lg mb-8 text-gray-300 max-w-2xl">
             Full-stack developer specializing in modern web technologies and user-centered design.
           </p>
           <div className="flex gap-4">
@@ -41,32 +40,28 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Featured Projects Section */}
+        {/* Featured Projects Slider */}
         <section className="mb-16">
           <h2 className="text-4xl font-bold mb-8">Featured Projects</h2>
-          {featuredProjects.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {featuredProjects.map((project) => (
-                <ProjectCard
-                  key={project.href}
-                  tag={project.tag}
-                  title={project.title}
-                  description={project.description}
-                  image={project.image}
-                  href={project.href}
-                />
-              ))}
-            </div>
-          ) : (
-            <p className="text-gray-400">No featured projects available.</p>
-          )}
+          <ProjectSlider projects={featuredProjects} />
         </section>
 
-        {/* Skills & Technologies Section */}
-        <section className="mb-16">
-          <h2 className="text-4xl font-bold mb-8">Skills & Technologies</h2>
+        {/* Primary Skills */}
+        <section className="mb-10">
+          <h2 className="text-4xl font-bold mb-2">Skills & Technologies</h2>
+          <p className="text-gray-400 mb-8">Technologies I work with the most</p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {skills.map((skill) => (
+            {primarySkills.map((skill) => (
+              <TechnologyBadge key={skill} technologyName={skill} size="lg" />
+            ))}
+          </div>
+        </section>
+
+        {/* Other Technologies */}
+        <section className="mb-16">
+          <h3 className="text-xl font-semibold text-white/60 mb-4">Other Technologies</h3>
+          <div className="flex flex-wrap gap-3">
+            {otherSkills.map((skill) => (
               <TechnologyBadge key={skill} technologyName={skill} />
             ))}
           </div>

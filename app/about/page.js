@@ -84,9 +84,9 @@ export default function About() {
             </Link>
             <Link
               href="/contact"
-              className="bg-gray-900 border border-white text-white px-6 py-3 font-medium hover:opacity-90 transition-opacity rounded-lg"
+              className="text-white underline underline-offset-4 hover:opacity-80 transition-opacity font-medium inline-flex items-center"
             >
-              Get In Touch
+              Contact Me
             </Link>
           </div>
         </section>

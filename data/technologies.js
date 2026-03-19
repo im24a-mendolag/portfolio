@@ -88,16 +88,11 @@ const technologyLookup = technologyCatalog.reduce((map, technology) => {
   return map;
 }, {});
 
-export const skills = [
-  'react',
-  'typescript',
-  'nodejs',
-  'nextjs',
-  'tailwind',
-  'mongodb',
-  'postgresql',
-  'docker',
-];
+export const primarySkills = ['react', 'nextjs', 'typescript', 'tailwind'];
+
+export const otherSkills = ['nodejs', 'postgresql', 'mongodb', 'docker'];
+
+export const skills = [...primarySkills, ...otherSkills];
 
 export function getTechnology(technologyIdentifier) {
   const key = technologyIdentifier.toLowerCase();
