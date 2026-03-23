@@ -20,7 +20,7 @@ export default function Header() {
 
   return (
     <header className="w-full fixed top-0 left-0 right-0 bg-black z-50">
-      <div className="flex items-center justify-between px-4 md:px-8 py-4 md:py-6 max-w-7xl mx-auto">
+      <div className="flex items-center justify-between px-4 md:px-8 py-3 md:py-4 max-w-7xl mx-auto">
         <h1 className="text-xl md:text-2xl font-bold text-white">Giovanni Mendola</h1>
         
         {/* Desktop Navigation */}

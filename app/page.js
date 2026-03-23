@@ -17,9 +17,9 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-black text-white">
-      <main className="max-w-7xl mx-auto px-8 py-12">
+      <main className="max-w-7xl mx-auto px-8 py-6">
         {/* Hero Section */}
-        <section className="py-16 md:py-24 mb-16">
+        <section className="py-8 md:py-12 mb-8">
           <h2 className="text-5xl font-bold mb-4">Hi, I'm Giovanni Mendola</h2>
           <p className="text-lg mb-8 text-gray-300 max-w-2xl">
             Full-stack developer specializing in modern web technologies and user-centered design.
