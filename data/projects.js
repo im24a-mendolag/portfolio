@@ -66,7 +66,7 @@ export const projectData = {
       'Order management',
     ],
     githubUrl: 'https://github.com/username/project-delta',
-    featured: false,
+    featured: true,
   },
   'project-epsilon': {
     tag: 'Next.js',
@@ -82,7 +82,7 @@ export const projectData = {
       'Performance metrics',
     ],
     githubUrl: 'https://github.com/username/project-epsilon',
-    featured: false,
+    featured: true,
   },
   'project-zeta': {
     tag: 'TypeScript',
