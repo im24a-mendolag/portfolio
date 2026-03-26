@@ -3,6 +3,8 @@ import ExperienceCard from '@/components/ExperienceCard';
 import EducationCard from '@/components/EducationCard';
 import { skills } from '@/data/technologies';
 import TechnologyBadge from '@/components/TechnologyBadge';
+import { experienceData } from '@/data/experience';
+import { educationData } from '@/data/education';
 
 export default function About() {
   return (
@@ -44,34 +46,28 @@ export default function About() {
         </section>
 
         {/* Experience Section */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-6">Experience</h2>
-          <div className="space-y-6">
-            <ExperienceCard
-              title="Full-Stack Developer"
-              company="Company Name"
-              period="2022 - Present"
-              description="Developed and maintained web applications using React, Next.js, and Node.js. Collaborated with cross-functional teams to deliver high-quality software solutions."
-            />
-            <ExperienceCard
-              title="Frontend Developer"
-              company="Company Name"
-              period="2020 - 2022"
-              description="Built responsive user interfaces and improved user experience across multiple web applications. Worked closely with designers to implement pixel-perfect designs."
-            />
-          </div>
-        </section>
+        {experienceData.length > 0 && (
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold mb-6">Experience</h2>
+            <div className="space-y-6">
+              {experienceData.map((exp, i) => (
+                <ExperienceCard key={i} {...exp} />
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* Education Section */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-6">Education</h2>
-          <EducationCard
-            degree="Bachelor's Degree in Computer Science"
-            institution="University Name"
-            period="2016 - 2020"
-            description="Focused on software engineering, web development, and computer systems. Graduated with honors."
-          />
-        </section>
+        {educationData.length > 0 && (
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold mb-6">Education</h2>
+            <div className="space-y-6">
+              {educationData.map((edu, i) => (
+                <EducationCard key={i} {...edu} />
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* CTA Section */}
         <section>

@@ -2,14 +2,14 @@ import Link from 'next/link';
 
 export default function ProjectCard({ tag, title, description, image, href = '#', className = '' }) {
   return (
-    <Link href={href} className={`block ${className}`}>
-        <div className="bg-white/5 border border-white/10 relative hover:border-white/25 transition-colors duration-300 cursor-pointer rounded-md overflow-hidden">
+    <Link href={href} className={`block group ${className}`}>
+      <div className="bg-white/5 relative hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(255,255,255,0.08)] transition-all duration-300 cursor-pointer rounded-md overflow-hidden">
         {image && (
           <div className="w-full aspect-[2/1] overflow-hidden">
             <img
               src={image}
               alt={title}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             />
           </div>
         )}
@@ -19,7 +19,7 @@ export default function ProjectCard({ tag, title, description, image, href = '#'
               {tag}
             </span>
             <svg
-              className="w-5 h-5 text-white"
+              className="w-5 h-5 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-200"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -33,7 +33,7 @@ export default function ProjectCard({ tag, title, description, image, href = '#'
             </svg>
           </div>
           <h3 className="text-xl font-bold text-white mb-2">{title}</h3>
-          <p className="text-white text-sm">{description}</p>
+          <p className="text-white/70 text-sm">{description}</p>
         </div>
       </div>
     </Link>
