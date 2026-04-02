@@ -79,6 +79,11 @@ const technologyCatalog = [
     name: 'WebSockets',
     logo: 'https://cdn.simpleicons.org/socketdotio/FFFFFF',
   },
+  {
+    id: 'spring-boot',
+    name: 'Spring Boot',
+    logo: 'https://cdn.simpleicons.org/springboot/6DB33F',
+  },
 ];
 
 const technologyLookup = technologyCatalog.reduce((map, technology) => {
