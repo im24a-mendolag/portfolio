@@ -50,6 +50,7 @@ export const projectData = {
       'Persistent link storage',
     ],
     githubUrl: 'https://github.com/im24a-mendolag/urlshortner',
+    liveUrl: 'https://urlshort.mendolag.ch',
     featured: true,
   },
 

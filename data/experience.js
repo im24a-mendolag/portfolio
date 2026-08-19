@@ -1,14 +1,14 @@
 export const experienceData = [
   {
-    title: 'Full-Stack Developer',
-    company: 'Company Name',
+    title: 'Lorem Ipsum Developer',
+    company: 'Lorem Corp',
     period: '2022 - Present',
-    description: 'Developed and maintained web applications using React, Next.js, and Node.js. Collaborated with cross-functional teams to deliver high-quality software solutions.',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
   },
   {
-    title: 'Frontend Developer',
-    company: 'Company Name',
+    title: 'Dolor Sit Amet Engineer',
+    company: 'Ipsum Industries',
     period: '2020 - 2022',
-    description: 'Built responsive user interfaces and improved user experience across multiple web applications. Worked closely with designers to implement pixel-perfect designs.',
+    description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.',
   },
 ];

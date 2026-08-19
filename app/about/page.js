@@ -19,18 +19,19 @@ export default function About() {
         <section className="mb-16">
           <div className="space-y-4 text-lg text-gray-300 max-w-3xl text-justify">
             <p>
-              I'm a passionate full-stack developer with a love for creating beautiful, 
-              functional web applications. I enjoy working with modern technologies and 
-              building solutions that make a difference.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </p>
             <p>
-              My journey in web development started with a curiosity about how websites 
-              work, and it has evolved into a career focused on creating exceptional user 
-              experiences through clean code and thoughtful design.
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+              culpa qui officia deserunt mollit anim id est laborum.
             </p>
             <p>
-              When I'm not coding, you can find me exploring new technologies, contributing 
-              to open-source projects, or sharing knowledge with the developer community.
+              Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+              turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor
+              sit amet, ante. Donec eu libero sit amet quam egestas semper.
             </p>
           </div>
         </section>

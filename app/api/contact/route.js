@@ -5,7 +5,38 @@ import { EmailTemplate } from '@/components/email-template';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000; // 10 minutes
+const RATE_LIMIT_MAX = 3;
+const ipMap = new Map(); // ip -> { count, resetAt }
+
+function isRateLimited(ip) {
+  const now = Date.now();
+  const entry = ipMap.get(ip);
+
+  if (!entry || now > entry.resetAt) {
+    ipMap.set(ip, { count: 1, resetAt: now + RATE_LIMIT_WINDOW_MS });
+    return false;
+  }
+
+  if (entry.count >= RATE_LIMIT_MAX) return true;
+
+  entry.count++;
+  return false;
+}
+
 export async function POST(request) {
+  const ip =
+    request.headers.get('x-forwarded-for')?.split(',')[0].trim() ??
+    request.headers.get('x-real-ip') ??
+    'unknown';
+
+  if (isRateLimited(ip)) {
+    return NextResponse.json(
+      { error: 'Too many requests. Please wait a few minutes before trying again.' },
+      { status: 429 }
+    );
+  }
+
   try {
     const body = await request.json();
     const { name, email, message } = body;

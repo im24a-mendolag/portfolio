@@ -103,7 +103,7 @@ export default function ProjectPage() {
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gray-900 border border-white text-white px-6 py-3 font-medium hover:opacity-90 transition-opacity rounded-lg inline-flex items-center gap-2"
+              className="bg-black border border-white text-white px-6 py-3 font-medium hover:opacity-90 transition-opacity rounded-lg inline-flex items-center gap-2"
             >
               <svg
                 className="w-5 h-5"
@@ -115,9 +115,32 @@ export default function ProjectPage() {
               View on GitHub
             </a>
           )}
+          {project.liveUrl && (
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-black border border-white text-white px-6 py-3 font-medium hover:opacity-90 transition-opacity rounded-lg inline-flex items-center gap-2"
+            >
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                />
+              </svg>
+              Live Demo
+            </a>
+          )}
           <Link
             href="/projects"
-            className="bg-white text-black px-6 py-3 font-medium hover:opacity-90 transition-opacity rounded-lg"
+            className="bg-black border border-white text-white px-6 py-3 font-medium hover:opacity-90 transition-opacity rounded-lg"
           >
             View All Projects
           </Link>
