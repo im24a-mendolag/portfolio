@@ -8,6 +8,8 @@ import ExperienceCard from '@/components/ExperienceCard';
 import EducationCard from '@/components/EducationCard';
 import { experienceData } from '@/data/experience';
 import { educationData } from '@/data/education';
+import CertificateCard from '@/components/CertificateCard';
+import { certificateData } from '@/data/certificates';
 
 export default function Home() {
   const featuredProjects = Object.entries(projectData)
@@ -106,6 +108,20 @@ export default function Home() {
               <div className="space-y-6">
                 {educationData.map((edu, i) => (
                   <EducationCard key={i} {...edu} />
+                ))}
+              </div>
+            </section>
+          </AnimatedSection>
+        )}
+
+        {/* Certificates */}
+        {certificateData.length > 0 && (
+          <AnimatedSection variant="fadeUp">
+            <section className="mb-16">
+              <h2 className="text-4xl font-bold mb-8">Certificates</h2>
+              <div className="space-y-6">
+                {certificateData.map((certificate, i) => (
+                  <CertificateCard key={i} {...certificate} />
                 ))}
               </div>
             </section>

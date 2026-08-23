@@ -5,6 +5,8 @@ import { skillCategories } from '@/data/technologies';
 import TechnologyBadge from '@/components/TechnologyBadge';
 import { experienceData } from '@/data/experience';
 import { educationData } from '@/data/education';
+import CertificateCard from '@/components/CertificateCard';
+import { certificateData } from '@/data/certificates';
 
 export default function About() {
   return (
@@ -77,6 +79,18 @@ export default function About() {
             <div className="space-y-6">
               {educationData.map((edu, i) => (
                 <EducationCard key={i} {...edu} />
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* Certificates Section */}
+        {certificateData.length > 0 && (
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold mb-6">Certificates</h2>
+            <div className="space-y-6">
+              {certificateData.map((certificate, i) => (
+                <CertificateCard key={i} {...certificate} />
               ))}
             </div>
           </section>
