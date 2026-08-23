@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import ExperienceCard from '@/components/ExperienceCard';
 import EducationCard from '@/components/EducationCard';
-import { skills } from '@/data/technologies';
+import { skillCategories } from '@/data/technologies';
 import TechnologyBadge from '@/components/TechnologyBadge';
 import { experienceData } from '@/data/experience';
 import { educationData } from '@/data/education';
@@ -41,10 +41,19 @@ export default function About() {
 
         {/* Skills Section */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-6">Skills & Expertise</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {skills.map((skill) => (
-              <TechnologyBadge key={skill} technologyName={skill} />
+          <h2 className="text-3xl font-bold mb-6">Skills &amp; Expertise</h2>
+          <div className="space-y-8">
+            {skillCategories.map((category) => (
+              <div key={category.title}>
+                <h3 className="text-sm font-semibold uppercase tracking-wider text-white/50 mb-4">
+                  {category.title}
+                </h3>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                  {category.skills.map((skill) => (
+                    <TechnologyBadge key={skill} technologyName={skill} />
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         </section>

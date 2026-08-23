@@ -79,6 +79,16 @@ const technologyCatalog = [
     name: 'Steam API',
     logo: 'https://cdn.simpleicons.org/steam/FFFFFF',
   },
+  {
+    id: 'neon',
+    name: 'Neon',
+    logo: 'https://cdn.simpleicons.org/neon/00E599',
+  },
+  {
+    id: 'vercel',
+    name: 'Vercel',
+    logo: 'https://cdn.simpleicons.org/vercel/FFFFFF',
+  },
 ];
 
 const technologyLookup = technologyCatalog.reduce((map, technology) => {
@@ -92,7 +102,26 @@ export const primarySkills = ['nextjs', 'react', 'javascript', 'tailwind'];
 
 export const otherSkills = ['typescript', 'python', 'postgresql', 'mysql', 'prisma', 'git'];
 
-export const skills = [...primarySkills, ...otherSkills];
+export const skillCategories = [
+  {
+    title: 'Programming Languages',
+    skills: ['javascript', 'typescript', 'python'],
+  },
+  {
+    title: 'Frameworks & Libraries',
+    skills: ['nextjs', 'react', 'tailwind', 'nextauth', 'spring-boot'],
+  },
+  {
+    title: 'Databases & ORMs',
+    skills: ['postgresql', 'neon', 'mysql', 'prisma'],
+  },
+  {
+    title: 'Tools & Platforms',
+    skills: ['git', 'vercel', 'resend'],
+  },
+];
+
+export const skills = skillCategories.flatMap((category) => category.skills);
 
 export function getTechnology(technologyIdentifier) {
   const key = technologyIdentifier.toLowerCase();
