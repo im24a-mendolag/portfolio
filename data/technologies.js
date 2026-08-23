@@ -1,5 +1,25 @@
 const technologyCatalog = [
   {
+    id: 'javascript',
+    name: 'JavaScript',
+    logo: 'https://cdn.simpleicons.org/javascript/F7DF1E',
+  },
+  {
+    id: 'python',
+    name: 'Python',
+    logo: 'https://cdn.simpleicons.org/python/3776AB',
+  },
+  {
+    id: 'mysql',
+    name: 'MySQL',
+    logo: 'https://cdn.simpleicons.org/mysql/4479A1',
+  },
+  {
+    id: 'git',
+    name: 'Git',
+    logo: 'https://cdn.simpleicons.org/git/F05032',
+  },
+  {
     id: 'nextjs',
     name: 'Next.js',
     logo: 'https://cdn.simpleicons.org/nextdotjs/FFFFFF',
@@ -18,16 +38,6 @@ const technologyCatalog = [
     id: 'tailwind',
     name: 'Tailwind CSS',
     logo: 'https://cdn.simpleicons.org/tailwindcss/06B6D4',
-  },
-  {
-    id: 'nodejs',
-    name: 'Node.js',
-    logo: 'https://cdn.simpleicons.org/nodedotjs/5FA04E',
-  },
-  {
-    id: 'mongodb',
-    name: 'MongoDB',
-    logo: 'https://cdn.simpleicons.org/mongodb/47A248',
   },
   {
     id: 'postgresql',
@@ -60,29 +70,14 @@ const technologyCatalog = [
     logo: 'https://cdn.simpleicons.org/resend/FFFFFF',
   },
   {
-    id: 'd3',
-    name: 'D3.js',
-    logo: 'https://cdn.simpleicons.org/d3dotjs/F9A03C',
-  },
-  {
-    id: 'stripe',
-    name: 'Stripe',
-    logo: 'https://cdn.simpleicons.org/stripe/635BFF',
-  },
-  {
-    id: 'graphql',
-    name: 'GraphQL',
-    logo: 'https://cdn.simpleicons.org/graphql/E10098',
-  },
-  {
-    id: 'websockets',
-    name: 'WebSockets',
-    logo: 'https://cdn.simpleicons.org/socketdotio/FFFFFF',
-  },
-  {
     id: 'spring-boot',
     name: 'Spring Boot',
     logo: 'https://cdn.simpleicons.org/springboot/6DB33F',
+  },
+  {
+    id: 'steam',
+    name: 'Steam API',
+    logo: 'https://cdn.simpleicons.org/steam/FFFFFF',
   },
 ];
 
@@ -93,9 +88,9 @@ const technologyLookup = technologyCatalog.reduce((map, technology) => {
   return map;
 }, {});
 
-export const primarySkills = ['react', 'nextjs', 'typescript', 'tailwind'];
+export const primarySkills = ['nextjs', 'react', 'javascript', 'tailwind'];
 
-export const otherSkills = ['nodejs', 'postgresql', 'mongodb', 'docker'];
+export const otherSkills = ['typescript', 'python', 'postgresql', 'mysql', 'prisma', 'git'];
 
 export const skills = [...primarySkills, ...otherSkills];
 

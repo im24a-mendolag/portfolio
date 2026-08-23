@@ -67,6 +67,13 @@ export async function POST(request) {
       );
     }
 
+    if (!contactInfo.email) {
+      return NextResponse.json(
+        { error: 'Contact form is currently unavailable.' },
+        { status: 503 }
+      );
+    }
+
     // Send email using Resend
     const { data, error } = await resend.emails.send({
       from: 'portfolio@email.mendolag.ch',

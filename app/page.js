@@ -32,7 +32,8 @@ export default function Home() {
             Hi, I&apos;m Giovanni Mendola
           </h2>
           <p className="text-lg mb-8 text-gray-300 max-w-2xl">
-            Full-stack developer specializing in modern web technologies and user-centered design.
+            IMS student at Kantonsschule Hottingen, building full-stack web apps with Next.js,
+            TypeScript and PostgreSQL. I solve problems with code and learn something new every day.
           </p>
           <div className="flex gap-4">
             <Link

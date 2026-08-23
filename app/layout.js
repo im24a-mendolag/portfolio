@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Portfolio",
-  description: "Full-stack developer specializing in modern web technologies and user-centered design",
+  title: "Giovanni Mendola — Portfolio",
+  description: "Portfolio of Giovanni Mendola — IMS student at Kantonsschule Hottingen building full-stack web apps with Next.js, TypeScript and PostgreSQL",
   icons: {
     icon: [{ url: "/gm.png", type: "image/png" }],
     apple: "/gm.png",

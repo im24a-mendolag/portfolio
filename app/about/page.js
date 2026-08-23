@@ -19,19 +19,22 @@ export default function About() {
         <section className="mb-16">
           <div className="space-y-4 text-lg text-gray-300 max-w-3xl text-justify">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              I&apos;m Giovanni Mendola, a student at the Informatikmittelschule of the
+              Kantonsschule Hottingen in Zürich. I grew up in Lugano and now live in Adliswil,
+              and I&apos;ve been building web applications since long before school asked me to.
             </p>
             <p>
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum.
+              My favourite way to learn is to ship something real. GradePoints started as a
+              spreadsheet I was tired of maintaining and turned into a full-stack Next.js app
+              with PostgreSQL, Prisma and authentication that Swiss vocational students actually
+              use to track their grades. Most of what I know about databases, deployment and
+              writing code other people can read came out of projects like that one.
             </p>
             <p>
-              Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
-              turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor
-              sit amet, ante. Donec eu libero sit amet quam egestas semper.
+              I work mostly with JavaScript and TypeScript, Next.js, Tailwind CSS and
+              PostgreSQL, and I&apos;m comfortable in Python as well. I speak Italian natively,
+              German and English fluently, and some French. Away from the keyboard you&apos;ll
+              find me swimming, reading, or playing guitar.
             </p>
           </div>
         </section>

@@ -1,8 +1,16 @@
 export const educationData = [
   {
-    degree: "Lorem Ipsum in Dolor Sit Amet",
-    institution: 'Universitas Lorem',
-    period: '2016 - 2020',
-    description: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget tempor sit amet ante.',
+    degree: 'Informatikmittelschule (IMS)',
+    institution: 'Kantonsschule Hottingen, Zürich',
+    period: 'Aug 2024 - Present',
+    description:
+      '',
+  },
+  {
+    degree: 'Secondary School',
+    institution: 'Schulhaus Kronenwiese, Adliswil',
+    period: 'Aug 2021 - Jul 2024',
+    description:
+      '',
   },
 ];
