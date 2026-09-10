@@ -7,6 +7,10 @@ import { experienceData } from '@/data/experience';
 import { educationData } from '@/data/education';
 import CertificateCard from '@/components/CertificateCard';
 import { certificateData } from '@/data/certificates';
+import SteamGames from '@/components/SteamGames';
+
+// Toggle to show/hide the Steam "Off the Clock" section
+const SHOW_STEAM = false;
 
 export default function About() {
   return (
@@ -27,16 +31,20 @@ export default function About() {
             </p>
             <p>
               My favourite way to learn is to ship something real. GradePoints started as a
-              spreadsheet I was tired of maintaining and turned into a full-stack Next.js app
-              with PostgreSQL, Prisma and authentication that Swiss vocational students actually
-              use to track their grades. Most of what I know about databases, deployment and
-              writing code other people can read came out of projects like that one.
+              spreadsheet I was tired of maintaining and turned into a full-stack app that Swiss
+              vocational students actually use to track their grades. The interesting part was on
+              the backend: modelling two different school grading systems in PostgreSQL with Prisma,
+              getting weighted averages and pass/fail rules right, and securing it all with
+              JWT-based authentication and email verification. School gave me the foundations in
+              databases and programming, and projects like that one are where I turned them into
+              things people actually use.
             </p>
             <p>
-              I work mostly with JavaScript and TypeScript, Next.js, Tailwind CSS and
-              PostgreSQL, and I&apos;m comfortable in Python as well. I speak Italian natively,
-              German and English fluently, and some French. Away from the keyboard you&apos;ll
-              find me swimming, reading, or playing guitar.
+              I work mostly on the backend with JavaScript, TypeScript and Python: PostgreSQL and
+              Prisma for data, JWT authentication, and REST APIs built with Next.js and Spring Boot.
+              React and Tailwind are there when a project needs a frontend too. I speak
+              Italian natively, German and English fluently, and some French. Away from the
+              keyboard you&apos;ll find me swimming, reading, or playing guitar.
             </p>
           </div>
         </section>
@@ -92,6 +100,16 @@ export default function About() {
               {certificateData.map((certificate, i) => (
                 <CertificateCard key={i} {...certificate} />
               ))}
+            </div>
+          </section>
+        )}
+
+        {/* Off the Clock Section */}
+        {SHOW_STEAM && (
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold mb-6">Off the Clock</h2>
+            <div className="max-w-md">
+              <SteamGames />
             </div>
           </section>
         )}

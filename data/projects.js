@@ -22,7 +22,7 @@ export const projectData = {
     title: 'GradePoints',
     description: 'Grade tracking app for Swiss students',
     image: '/gradepoints.png',
-    longDescription: 'GradePoints is a full-stack grade tracking web app built for Swiss vocational school students. It supports two schools — KSH (semester-based) and BZZ (module-based) — each with distinct grading structures, weighted averages, bonus/malus adjustments, and pass/fail rules. Features include interactive statistics with charts, email verification, and account management.',
+    longDescription: 'GradePoints is a full-stack grade tracking web app built for Swiss vocational school students. It supports two schools, KSH (semester-based) and BZZ (module-based), each with distinct grading structures, weighted averages, bonus/malus adjustments, and pass/fail rules. Features include interactive statistics with charts, email verification, and account management.',
     technologies: ['nextjs', 'typescript', 'tailwind', 'prisma', 'postgresql', 'nextauth', 'recharts', 'resend'],
     features: [
       'Multi-school support with KSH semester-based and BZZ module-based grading',
@@ -41,7 +41,7 @@ export const projectData = {
     title: 'Shelfle',
     description: 'Wordle-style guessing game for your Steam library',
     image: '/shelfle.png',
-    longDescription: 'Shelfle is a Wordle-inspired guessing game built around your own Steam library. Players sign in with Steam, sync their games, and try to identify titles from their collection — or from a friend\'s library — across several game modes. Game metadata such as tags, release year, reviews and pricing is pulled from the Steam API and enriched in a PostgreSQL database, which also tracks rounds, guess history and player statistics.',
+    longDescription: 'Shelfle is a Wordle-inspired guessing game built around your own Steam library. Players sign in with Steam, sync their games, and try to identify titles from their collection, or from a friend\'s library, across several game modes. Game metadata such as tags, release year, reviews and pricing is pulled from the Steam API and enriched in a PostgreSQL database, which also tracks rounds, guess history and player statistics.',
     technologies: ['nextjs', 'react', 'typescript', 'tailwind', 'prisma', 'postgresql', 'nextauth', 'steam'],
     features: [
       'Steam authentication with automatic library sync',

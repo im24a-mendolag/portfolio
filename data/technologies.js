@@ -10,6 +10,11 @@ const technologyCatalog = [
     logo: 'https://cdn.simpleicons.org/python/3776AB',
   },
   {
+    id: 'java',
+    name: 'Java',
+    logo: 'https://cdn.simpleicons.org/openjdk/FFFFFF',
+  },
+  {
     id: 'mysql',
     name: 'MySQL',
     logo: 'https://cdn.simpleicons.org/mysql/4479A1',
@@ -98,26 +103,30 @@ const technologyLookup = technologyCatalog.reduce((map, technology) => {
   return map;
 }, {});
 
-export const primarySkills = ['nextjs', 'react', 'javascript', 'tailwind'];
+export const primarySkills = ['postgresql', 'prisma', 'nextjs', 'spring-boot'];
 
-export const otherSkills = ['typescript', 'python', 'postgresql', 'mysql', 'prisma', 'git'];
+export const otherSkills = ['typescript', 'python', 'nextauth', 'mysql', 'react', 'tailwind', 'git'];
 
 export const skillCategories = [
   {
-    title: 'Programming Languages',
-    skills: ['javascript', 'typescript', 'python'],
-  },
-  {
-    title: 'Frameworks & Libraries',
-    skills: ['nextjs', 'react', 'tailwind', 'nextauth', 'spring-boot'],
-  },
-  {
     title: 'Databases & ORMs',
-    skills: ['postgresql', 'neon', 'mysql', 'prisma'],
+    skills: ['postgresql', 'neon', 'prisma', 'mysql'],
+  },
+  {
+    title: 'Backend & APIs',
+    skills: ['spring-boot', 'nextjs', 'nextauth', 'resend'],
+  },
+  {
+    title: 'Programming Languages',
+    skills: ['java', 'python', 'typescript', 'javascript'],
+  },
+  {
+    title: 'Frontend',
+    skills: ['react', 'tailwind'],
   },
   {
     title: 'Tools & Platforms',
-    skills: ['git', 'vercel', 'resend'],
+    skills: ['git', 'docker', 'vercel'],
   },
 ];
 

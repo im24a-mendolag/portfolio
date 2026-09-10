@@ -11,7 +11,7 @@
 // }
 export const certificateData = [
   {
-    name: 'Hackathon Participation — Web Technologies',
+    name: 'Hackathon Participation: Web Technologies',
     issuer: 'Renuo & Kantonsschule Hottingen',
     date: 'Aug 2026',
     description:
@@ -20,7 +20,7 @@ export const certificateData = [
     image: '/certificates/hackathon-ksh.jpg',
   },
   {
-    name: 'Abacus Financial Accounting — Certified User',
+    name: 'Abacus Financial Accounting: Certified User',
     issuer: 'ABACUS Research AG',
     date: 'Jun 2026',
     description:
