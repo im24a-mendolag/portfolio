@@ -71,4 +71,23 @@ export const projectData = {
     liveUrl: 'https://urlshort.mendolag.ch',
     featured: true,
   },
+  'calendar-gm': {
+    tag: 'React',
+    title: 'Calendar',
+    description: 'Experimental calendar app for school timetables, exams and events',
+    image: '/calendar-gm.png',
+    longDescription: 'An experiment: I had never built a calendar app before and wanted to see what it takes to make one. The result is a calendar for school and personal life. You enter your school timetable once and it repeats every week of the term, skipping holidays. Exams, tests, deadlines and homework appear on top of it, together with personal events like appointments or job interviews. Built with React and TypeScript on Vite, with a Hono API running as a Vercel serverless function and a Neon Postgres database accessed through Prisma.',
+    technologies: ['react', 'typescript', 'vite', 'hono', 'prisma', 'neon', 'better-auth', 'tanstack-query'],
+    features: [
+      'Timetable editor with real lesson times, subjects, terms and holidays',
+      'Week and month views with drag-and-drop events and a live "now" line',
+      'Today overview with current and next lesson, countdowns and homework due',
+      'Exam import from the school portal and .ics calendar import and export',
+      'Homework tracker with quick-add and due dates based on the next lesson',
+      'Mobile layout with a bottom tab bar and single-day week view',
+    ],
+    githubUrl: 'https://github.com/im24a-mendolag/calendar-gm',
+    liveUrl: 'https://calendar-gm.vercel.app',
+    featured: true,
+  },
 };

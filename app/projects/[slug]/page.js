@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import { projectData } from '@/data/projects';
@@ -18,6 +19,23 @@ export default function ProjectPage() {
     features: [],
     githubUrl: null,
   };
+
+  const [isImageOpen, setIsImageOpen] = useState(false);
+
+  useEffect(() => {
+    if (!isImageOpen) return;
+
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') setIsImageOpen(false);
+    };
+    document.addEventListener('keydown', handleKeyDown);
+    document.body.style.overflow = 'hidden';
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = '';
+    };
+  }, [isImageOpen]);
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -60,17 +78,49 @@ export default function ProjectPage() {
             {/* Project Image */}
             {project.image && (
               <div className="w-full lg:w-[45%] flex-shrink-0">
-                <div className="rounded-lg overflow-hidden border border-white">
+                <button
+                  type="button"
+                  onClick={() => setIsImageOpen(true)}
+                  aria-label={`Enlarge ${project.title} screenshot`}
+                  className="block w-full rounded-lg overflow-hidden border border-white cursor-zoom-in group"
+                >
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-auto object-cover"
+                    className="w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-300"
                   />
-                </div>
+                </button>
               </div>
             )}
           </div>
         </section>
+
+        {/* Image Lightbox */}
+        {isImageOpen && (
+          <div
+            role="dialog"
+            aria-modal="true"
+            aria-label={`${project.title} screenshot`}
+            onClick={() => setIsImageOpen(false)}
+            className="fixed inset-0 z-50 bg-black/90 backdrop-blur-sm flex items-center justify-center p-4 md:p-10 cursor-zoom-out"
+          >
+            <button
+              type="button"
+              onClick={() => setIsImageOpen(false)}
+              aria-label="Close image"
+              className="absolute top-4 right-4 bg-white/10 hover:bg-white/20 transition-all rounded-full p-2"
+            >
+              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <img
+              src={project.image}
+              alt={project.title}
+              className="max-w-full max-h-full object-contain rounded-lg border border-white/20"
+            />
+          </div>
+        )}
 
         {/* Technologies Used */}
         {project.technologies.length > 0 && (

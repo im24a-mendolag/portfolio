@@ -94,6 +94,26 @@ const technologyCatalog = [
     name: 'Vercel',
     logo: 'https://cdn.simpleicons.org/vercel/FFFFFF',
   },
+  {
+    id: 'vite',
+    name: 'Vite',
+    logo: 'https://cdn.simpleicons.org/vite/646CFF',
+  },
+  {
+    id: 'hono',
+    name: 'Hono',
+    logo: 'https://cdn.simpleicons.org/hono/E36002',
+  },
+  {
+    id: 'better-auth',
+    name: 'Better Auth',
+    logo: 'https://cdn.simpleicons.org/betterauth/FFFFFF',
+  },
+  {
+    id: 'tanstack-query',
+    name: 'TanStack Query',
+    logo: 'https://cdn.simpleicons.org/reactquery/FF4154',
+  },
 ];
 
 const technologyLookup = technologyCatalog.reduce((map, technology) => {
