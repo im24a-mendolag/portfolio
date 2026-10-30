@@ -51,7 +51,7 @@ export const projectData = {
       'Persistent round tracking, guess history and player statistics',
     ],
     githubUrl: 'https://github.com/im24a-mendolag/shelfle',
-    liveUrl: 'https://shelfle.vercel.app',
+    liveUrl: 'https://shelfle.mendolag.ch',
     featured: true,
   },
   'url-shortener': {
@@ -87,7 +87,7 @@ export const projectData = {
       'Mobile layout with a bottom tab bar and single-day week view',
     ],
     githubUrl: 'https://github.com/im24a-mendolag/calendar-gm',
-    liveUrl: 'https://calendar-gm.vercel.app',
+    liveUrl: 'https://calendar.mendolag.ch',
     featured: true,
   },
 };
